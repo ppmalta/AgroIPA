@@ -1,0 +1,1 @@
+# AgroIPA Django Project
