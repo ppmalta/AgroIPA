@@ -1,0 +1,7 @@
+[
+  {
+    "model": "core.municipality",
+    "pk": 1,
+    "fields": {"name": "Recife", "state": "Pernambuco", "code": "REC"}
+  }
+]
