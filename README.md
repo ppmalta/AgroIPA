@@ -1,10 +1,6 @@
-# Bem-vindo ao seu projeto Lovable
+# Bem-vindo ao AGROIPA
 
 ## Informações sobre o projeto
-
-**Use o seu IDE preferido**
-
-Se quiser trabalhar localmente usando o seu próprio IDE
 
 O único requisito é ter o Node.js e o npm instalados - [instale com o nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -12,10 +8,10 @@ Siga estes passos:
 
 ```sh
 # Passo 1: Clone o repositório usando a URL Git do projeto.
-git clone <SUA_URL_GIT>
+git clone <AgroIPA>
 
 # Passo 2: Navegue até o diretório do projeto.
-cd <AGROIPA>
+cd <AgroIPA>
 
 # Passo 3: Instale as dependências necessárias.
 npm i
@@ -24,22 +20,8 @@ npm i
 npm run dev
 ```
 
-**Editar um ficheiro diretamente no GitHub**
-
-- Navegue até ao(s) ficheiro(s) desejado(s).
-- Clique no botão «Editar» (ícone de lápis) no canto superior direito da visualização do ficheiro.
-- Faça as suas alterações e confirme as alterações.
-
-**Use o GitHub Codespaces**
-
-- Navegue até a página principal do seu repositório.
-- Clique no botão “Código” (botão verde) próximo ao canto superior direito.
-- Selecione a guia “Codespaces”.
-- Clique em “Novo codespace” para iniciar um novo ambiente Codespace.
-- Edite os ficheiros diretamente no Codespace e confirme e envie as alterações quando terminar.
-
 ## Que tecnologias são utilizadas neste projeto?
-
+→ Front-end:
 Este projeto foi desenvolvido com:
 
 - Vite
@@ -49,9 +31,8 @@ Este projeto foi desenvolvido com:
 - Tailwind CSS
 
 
-# agroipa_backend - scaffold
-
-Este repositório contém um scaffold simplificado do backend Django para o projeto agroIPA, gerado automaticamente a partir da documentação fornecida.
+→ back-end:
+Este repositório contém um backend Django simplificado para o projeto agroIPA.
 
 ## Como usar
 
@@ -81,4 +62,4 @@ Este repositório contém um scaffold simplificado do backend Django para o proj
    python manage.py runserver
    ```
 
-> Observação: Este scaffold é um ponto de partida; ajuste conforme necessário e complemente com validações, permissões e testes.
+> Observação: Este scaffold é um ponto de partida; se necessário ajustar conforme as circunstâncias, permissões e testes.
