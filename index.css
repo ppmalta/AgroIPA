@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* AgroIPA Color Palette */
+    --background: 180 25% 15%; /* Dark teal background */
+    --foreground: 0 0% 95%;
+
+    --card: 40 20% 96%; /* Cream white cards */
+    --card-foreground: 180 20% 20%;
+
+    --popover: 40 20% 96%;
+    --popover-foreground: 180 20% 20%;
+
+    --primary: 84 65% 50%; /* Lime green */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 92%; /* Light gray */
+    --secondary-foreground: 180 20% 30%;
+
+    --muted: 180 10% 85%;
+    --muted-foreground: 180 10% 45%;
+
+    --accent: 180 40% 25%; /* Dark green accent */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 180 10% 85%;
+    --input: 0 0% 90%;
+    --ring: 84 65% 50%;
+
+    --radius: 1rem;
+
+    /* Custom colors */
+    --success: 142 70% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --info: 200 85% 55%;
+    --info-foreground: 0 0% 100%;
+
+    /* Sidebar */
+    --sidebar-background: 180 30% 18%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 84 65% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 25% 25%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 180 20% 25%;
+    --sidebar-ring: 84 65% 50%;
+
+    /* Chart colors */
+    --chart-green: 142 70% 45%;
+    --chart-yellow: 45 93% 47%;
+    --chart-orange: 25 95% 53%;
+    --chart-red: 0 84% 60%;
+  }
+
+  .dark {
+    --background: 180 25% 10%;
+    --foreground: 0 0% 95%;
+    --card: 180 20% 15%;
+    --card-foreground: 0 0% 95%;
+    --popover: 180 20% 15%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 84 65% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 180 15% 20%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 180 15% 25%;
+    --muted-foreground: 180 10% 60%;
+    --accent: 180 40% 25%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 180 15% 25%;
+    --input: 180 15% 25%;
+    --ring: 84 65% 50%;
+    --sidebar-background: 180 30% 12%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 84 65% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 180 25% 20%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 180 20% 20%;
+    --sidebar-ring: 84 65% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .auth-card {
+    @apply bg-card rounded-3xl p-8 shadow-2xl max-w-md w-full;
+  }
+
+  .auth-input {
+    @apply w-full px-4 py-3 bg-input rounded-full text-card-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-primary-foreground font-semibold py-3 px-8 rounded-full hover:opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground font-medium py-3 px-8 rounded-full hover:bg-secondary/80 transition-all duration-200;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-foreground font-semibold py-3 px-8 rounded-full hover:opacity-90 transition-all duration-200;
+  }
+
+  .link-primary {
+    @apply text-info hover:underline cursor-pointer font-medium transition-colors;
+  }
+
+  .kpi-card {
+    @apply bg-card rounded-2xl p-5 shadow-md border border-border/50;
+  }
+
+  .kpi-card-success {
+    @apply bg-gradient-to-br from-emerald-50 to-emerald-100 border-emerald-200;
+  }
+
+  .kpi-card-warning {
+    @apply bg-gradient-to-br from-amber-50 to-amber-100 border-amber-200;
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl text-sidebar-foreground hover:bg-sidebar-accent transition-all duration-200;
+  }
+
+  .sidebar-link-active {
+    @apply bg-sidebar-accent text-sidebar-primary font-semibold;
+  }
+
+  .status-badge {
+    @apply px-3 py-1 rounded-full text-xs font-medium;
+  }
+
+  .status-success {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+
+  .status-warning {
+    @apply bg-amber-100 text-amber-700;
+  }
+
+  .status-error {
+    @apply bg-red-100 text-red-700;
+  }
+
+  .status-info {
+    @apply bg-blue-100 text-blue-700;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from { 
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
